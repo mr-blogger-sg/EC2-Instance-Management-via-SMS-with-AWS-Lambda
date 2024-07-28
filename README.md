@@ -6,6 +6,9 @@ This project demonstrates how to automate the management of AWS EC2 instances us
 
 <img width="1145" alt="Screenshot 2024-07-28 at 4 17 56 PM" src="https://github.com/user-attachments/assets/c8eb8ae6-2aad-4a4a-9dba-aa9a667717c5">
 
+## Challenge
+
+Sometimes, we need to manage our EC2 instances while we're away or busy. For instance, starting or stopping instances on-demand via a simple SMS can be incredibly useful.
 
 ## Architecture
 
@@ -17,6 +20,13 @@ This project demonstrates how to automate the management of AWS EC2 instances us
 
 - Start and stop EC2 instances via SMS commands.
 - Notify about the action taken through SNS.
+
+## How It Works:
+
+1. Send an SMS with either "start" or "stop" to a number managed by Amazon Pinpoint.
+2. Amazon Pinpoint forwards the message to an SNS Topic.
+3. The SNS Topic triggers an AWS Lambda function that processes the message and performs the action on the EC2 instance.
+4. The Lambda function checks the instance state and either starts or stops it as needed.
 
 ## Getting Started
 
