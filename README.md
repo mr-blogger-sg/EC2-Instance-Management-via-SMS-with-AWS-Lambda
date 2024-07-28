@@ -4,6 +4,9 @@
 
 This project demonstrates how to automate the management of AWS EC2 instances using SMS messages. By leveraging AWS services, specifically Amazon Pinpoint, SNS (Simple Notification Service), and AWS Lambda, this solution allows you to start or stop EC2 instances simply by sending an SMS message.
 
+<img width="1145" alt="Screenshot 2024-07-28 at 4 17 56 PM" src="https://github.com/user-attachments/assets/c8eb8ae6-2aad-4a4a-9dba-aa9a667717c5">
+
+
 ## Architecture
 
 1. **Amazon Pinpoint**: Handles incoming SMS messages and routes them to an SNS topic.
